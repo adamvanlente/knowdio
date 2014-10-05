@@ -14,6 +14,13 @@ module.exports = function(app) {
     // Utilities
     var newsUtils = require('./news-utils.js');
 
+
+    app.get('/', function(req, res) {
+
+        res.render('index.jade');
+
+    });
+
     // Set up a route for our cron job; it will run with a curl command.
     app.get('/cron', function(req, res) {
 
